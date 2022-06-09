@@ -5,8 +5,8 @@ import play from '../assets/gambling.png'
 import win from '../assets/bigwin.png'
 const About = () => {
   return (
-    <div className="w-full h-full py-2 bg-black md:py-28 ">
-      <div className="max-w-[1240px] h-full mx-auto ">
+    <div name="about" className="w-full h-full bg-black  ">
+      <div className="max-w-[1240px] mx-auto ">
         <div className="text-center">
           <h2 className="text-4xl font-bold md:text-6xl text-white">
             Trusted by players around the world

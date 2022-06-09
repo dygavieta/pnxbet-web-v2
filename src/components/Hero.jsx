@@ -1,15 +1,21 @@
 import React from 'react'
 
 import casinoImg from '../assets/slotmachine.png'
-import live from '../assets/playing-card.png'
+import live from '../assets/poker-table.png'
 import esport from '../assets/gaming.png'
 import slot from '../assets/slot-machine.png'
 import sport from '../assets/trophy.png'
+import poker from '../assets/playing-card.png'
+import virtual from '../assets/horse.png'
+
 const Hero = () => {
   return (
-    <div className="w-full h-screen   flex flex-col justify-between">
-      <div className=" md:grid grid-cols-2 max-w-[1240px] m-auto">
-        <div className="flex flex-col justify-center md:items-start w-full px-2 pt-6">
+    <div
+      name="home"
+      className="w-full h-full flex flex-col justify-between  py-28 bg-gradient-to-b from-orange-600 via-yellow-700 to-black"
+    >
+      <div className=" max-w-[1240px] m-auto md:grid grid-flow-row-dense grid-cols-2  ">
+        <div className="flex flex-col justify-center md:items-start w-full px-2  ">
           <p className="text-2xl">Play anytime, anywhere</p>
           <h1 className="py-3 text-4xl md:text-6xl font-bold">
             PNXBET ONLINE CASINO
@@ -17,35 +23,36 @@ const Hero = () => {
           <p className="text-1xl">
             A premiere licensed, cyprto-based online casino
           </p>
-          <button className="bg-orange-600 border-orange-600 text-white w-[70%]">
+          <button className="animate-pulse bg-orange-600 border-orange-600 text-white w-[70%]">
             Bet Now
           </button>
         </div>
         <div>
           <img src={casinoImg} alt="/" className="w-full" />
         </div>
-        <div
-          className="absolute flex flex-col  bottom-[-1%] py-0 min-w-full   border-none
-          md:min-w-[760px] md:bottom-[2%] md:py-4 left-1/2 transform -translate-x-1/2  bg-slate-400 md:border border-r-zinc-300 rounded-xl text-center shadow-xl "
-        >
-          <p className="text-xl font-semibold md:text-4xl ">PNXBET SERVICES</p>
-          <div className="grid grid-cols-2 flex-wrap justify-between md:flex md:flex-nowrap ">
-            <p className="flex px-2 py-2 items-center text-xs text-slate-600  md:text-xl flex-col ">
-              <img src={live} className="w-[15%] md:w-[20%]  " /> Live Casino
-              Dealers
-            </p>
-            <p className="flex  px-2 py-2 items-center text-xs text-slate-600  md:text-xl flex-col">
-              <img src={slot} className="w-[15%] md:w-[20%]  " /> Slot Machine
-            </p>
-            <p className="flex  px-2 py-2 items-center text-xs text-slate-600  md:text-xl flex-col">
-              <img src={sport} className="w-[15%] md:w-[20%]  " /> Sports
-              Betting
-            </p>
-            <p className="flex  px-2 py-2 items-center text-xs text-slate-600  md:text-xl flex-col">
-              <img src={esport} className="w-[15%] md:w-[20%]  " /> E-sports
-              Betting
-            </p>
-          </div>
+      </div>
+      <div className="items-center text-center max-w-[1240px] m-auto py-2  border-2 border-orange-700 rounded-3xl bg-black text-white ">
+        <p className="text-xl font-bold md:text-4xl ">GAMES PROVIDED</p>
+        <div className="grid grid-cols-3 flex-wrap justify-between md:flex md:flex-nowrap md:py-4">
+          <p className="heroGame">
+            <img src={sport} className="heroIcon" />
+            Sports
+          </p>
+          <p className="heroGame">
+            <img src={slot} className="heroIcon " /> Casino
+          </p>
+          <p className="heroGame">
+            <img src={live} className="heroIcon" /> Live Casino
+          </p>
+          <p className="heroGame">
+            <img src={esport} className="heroIcon" /> Esports
+          </p>
+          <p className="heroGame">
+            <img src={poker} className="heroIcon" /> Poker
+          </p>
+          <p className="heroGame">
+            <img src={virtual} className="heroIcon" /> Virtual
+          </p>
         </div>
       </div>
     </div>

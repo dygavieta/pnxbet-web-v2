@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-
+import { Link, animateScroll as scroll } from 'react-scroll'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
 
-  const handleNav = () => {
-    setNav(!nav)
-  }
+  const handleNav = () => setNav(!nav)
+  const handleClose = () => setNav(!nav)
 
   return (
     <div className="w-full h-[80px] z-10 bg-black fixed drop-shadow-sm ">
@@ -14,10 +13,44 @@ const Navbar = () => {
         <div className="flex items-center">
           <h1 className="text-3xl font-bold mr-4 sm:text-4xl"> PNXBET</h1>
           <ul className="hidden md:flex  ">
-            <li> Home</li>
-            <li> About us</li>
-            <li> Test 1</li>
-            <li> Test 1</li>
+            <li>
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                delay={300}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={1000}
+                delay={300}
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="guide"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
+                delay={300}
+              >
+                Guides
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="hidden md:flex pr-4">
@@ -42,10 +75,47 @@ const Navbar = () => {
         }
       >
         <ul>
-          <li className="border-b-2 border-gray-900 "> Home</li>
-          <li className="border-b-2 border-gray-900 "> About us</li>
-          <li className="border-b-2 border-gray-900 "> Test 1</li>
-          <li className="border-b-2 border-gray-900 "> Test 1</li>
+          <li className="border-b-2 border-gray-900 ">
+            <Link
+              onClick={handleClose}
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              delay={300}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="border-b-2 border-gray-900 ">
+            <Link
+              onClick={handleClose}
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={1000}
+              delay={300}
+            >
+              About Us
+            </Link>
+          </li>
+          <li className="border-b-2 border-gray-900 ">
+            <Link
+              onClick={handleClose}
+              activeClass="active"
+              to="guide"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={1000}
+              delay={300}
+            >
+              Guides
+            </Link>
+          </li>
           <div className="flex flex-col my-2 ">
             <button className="bg-orange-600  text-white mr-2 hover:bg-orange-700 border-orange-700 w-full">
               Sign in

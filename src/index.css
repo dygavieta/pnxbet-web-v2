@@ -10,4 +10,15 @@
   button {
     @apply border font-semibold py-2 px-4 rounded;
   }
+
+  .heroGame {
+    @apply flex px-2 py-2 font-semibold items-center text-xs text-slate-300  md:text-xl flex-col;
+  }
+  .heroIcon {
+    @apply w-[30%] hover:animate-bounce hover:cursor-pointer;
+  }
+
+  .guideImg {
+    @apply border-2 border-white   md:hover:scale-105 hover:cursor-pointer hover:border-orange-600;
+  }
 }
