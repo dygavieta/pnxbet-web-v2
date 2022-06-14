@@ -1,18 +1,23 @@
 import React from 'react'
-import About from './components/About'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Registration from './components/Guides/Registration'
+
 import Footer from './components/Footer'
-import Guides from './components/Guides'
-import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import Home from './components/Pages/Home'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Guides />
-      <Footer />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="home" element={<Home />} />
+          <Route path="" element={<Home />} />
+          <Route path="guides/registration_guide" element={<Registration />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   )
 }

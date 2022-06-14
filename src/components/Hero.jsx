@@ -11,7 +11,7 @@ import virtual from '../assets/horse.png'
 const Hero = () => {
   return (
     <div
-      name="home"
+      name="hero"
       className="w-full h-full flex flex-col justify-between  py-28 bg-gradient-to-b from-orange-600 via-yellow-700 to-black"
     >
       <div className=" max-w-[1240px] m-auto md:grid grid-flow-row-dense grid-cols-2  ">

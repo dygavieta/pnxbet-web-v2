@@ -21,4 +21,8 @@
   .guideImg {
     @apply border-2 border-white   md:hover:scale-105 hover:cursor-pointer hover:border-orange-600;
   }
+
+  .slideArrow {
+    @apply absolute text-orange-600 w-10  top-[50%] z-10 cursor-pointer;
+  }
 }
