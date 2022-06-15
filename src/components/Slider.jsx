@@ -4,12 +4,11 @@ import {
   ArrowCircleLeftIcon,
   ArrowCircleRightIcon,
 } from '@heroicons/react/outline'
-import RegisContents from './Guides/RegisContents'
 
-const Slider = () => {
+const Slider = (props) => {
   const [modal, setModal] = useState(false)
   const [current, setCurrent] = useState(0)
-  const length = RegisContents.length
+  const length = props.theme.length
 
   const openModal = () => {
     setModal(true)
@@ -37,7 +36,7 @@ const Slider = () => {
     <div className=" flex relative justify-center select-none">
       <div className="md:grid grid-cols-2 py-4 cursor-pointer ">
         <div className=" px-8 md:px-14 text-white opacity-100">
-          {RegisContents.map((slide, index) => {
+          {props.theme.map((slide, index) => {
             return (
               <div
                 className={
@@ -53,6 +52,9 @@ const Slider = () => {
                     >
                       {slide.link}
                     </a>
+                    {slide.sub.map((line) => {
+                      return <p className="text-sm md:text-xl">{line}</p>
+                    })}
                   </div>
                 )}
               </div>
@@ -68,7 +70,7 @@ const Slider = () => {
             className=" slideArrow right-0 "
             onClick={nextSlide}
           />
-          {RegisContents.map((slide, index) => {
+          {props.theme.map((slide, index) => {
             return (
               <div
                 className={
@@ -77,7 +79,7 @@ const Slider = () => {
                 key={index}
               >
                 {index === current && (
-                  <img src={slide.image} className="w-[70%]" />
+                  <img src={slide.image} className="w-full md:w-[70%] " />
                 )}
               </div>
             )
