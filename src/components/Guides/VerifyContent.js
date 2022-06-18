@@ -1,10 +1,9 @@
 const VerifyContent = [
   {
-    id: 1,
     image: require('../../assets/verify-slides/verify1.png'),
     head: 'EDIT PROFILE.',
     sub: [
-      'a.) Go to My Profile -> Edit Profile',
+      'a.) Go to My Profile > Edit Profile',
       'b.) Fill out the form',
       'c.) Click Save Profile',
     ],
@@ -14,7 +13,7 @@ const VerifyContent = [
     head: 'UPLOAD ID DOCUMENT',
     sub: [
       'a.) Take a picture of your valid ID on a flat surface with good quality',
-      'b.) Go to My Profile -> Documents',
+      'b.) Go to My Profile > Documents',
       'c.) Select type of ID',
       'd.) Upload the ID DOCUMENT',
     ],
@@ -24,7 +23,7 @@ const VerifyContent = [
     head: 'UPLOAD SELFIE DOCUMENT.',
     sub: [
       'a.) Take a selfie with your valid ID and a paper with written PNXBET text, signature and current date on it',
-      'b.) Go to My Profile -> Documents',
+      'b.) Go to My Profile > Documents',
       'c.) Select type of ID',
       'd.) Upload the ID DOCUMENT',
     ],

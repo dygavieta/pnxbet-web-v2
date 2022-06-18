@@ -1,17 +1,17 @@
 const DepoContent = [
   {
-    id: 1,
-    image: require('../../assets/verify-slides/verify1.png'),
-    head: 'EDIT PROFILE.',
+    image: require('../../assets/deposit-slides/depo1.png'),
+    head: 'DEPOSIT VIA BITCOIN.',
     sub: [
-      'a.) Go to My Profile -> Edit Profile',
-      'b.) Fill out the form',
-      'c.) Click Save Profile',
+      'a.) Go to My Wallet > Deposit section',
+      'b.) Click paxful withdrawal option',
+      'c.) Enter the desired amount to deposit',
+      'd.) Click submit and transfer bitcoin to the address given to you by the invoice bitcoin',
     ],
   },
   {
-    image: require('../../assets/verify-slides/verify2.png'),
-    head: 'UPLOAD ID DOCUMENT',
+    image: require('../../assets/deposit-slides/depo2.png'),
+    head: 'DEPOSIT VIA VOUCHER CODES',
     sub: [
       'a.) Take a picture of your valid ID on a flat surface with good quality',
       'b.) Go to My Profile -> Documents',
@@ -20,24 +20,13 @@ const DepoContent = [
     ],
   },
   {
-    image: require('../../assets/verify-slides/verify3.png'),
-    head: 'UPLOAD SELFIE DOCUMENT.',
+    image: require('../../assets/deposit-slides/depo1.png'),
+    head: 'DEPOSIT VIA VOUCHER CODES',
     sub: [
-      'a.) Take a selfie with your valid ID and a paper with written PNXBET text, signature and current date on it',
-      'b.) Go to My Profile -> Documents',
+      'a.) Take a picture of your valid ID on a flat surface with good quality',
+      'b.) Go to My Profile > Documents',
       'c.) Select type of ID',
       'd.) Upload the ID DOCUMENT',
-    ],
-  },
-  {
-    image: require('../../assets/verify-slides/verify4.png'),
-    head: 'WAIT FOR APPROVAL.',
-    sub: [
-      'a.) Verified (Green)',
-      'b.) New and In Progress (Yellow)',
-      'c.) Rejected (Red)',
-      'd.) Verified users will have a check mark beside their username',
-      'e.) Rejected documents can be still re-processed',
     ],
   },
 ]

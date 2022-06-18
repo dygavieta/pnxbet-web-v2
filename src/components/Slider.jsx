@@ -6,13 +6,10 @@ import {
 } from '@heroicons/react/outline'
 
 const Slider = (props) => {
-  const [modal, setModal] = useState(false)
   const [current, setCurrent] = useState(0)
-  const length = props.theme.length
 
-  const openModal = () => {
-    setModal(true)
-  }
+  const [open, setOpen] = useState(false)
+  const length = props.theme.length
 
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1)
   const prevSlide = () => setCurrent(current === 0 ? length - 1 : current - 1)
@@ -32,9 +29,18 @@ const Slider = (props) => {
     window.open('https://pnxbet.com/affiliates/?btag=209088')
   }
 
+  useEffect(() => {
+    const test = getComputedStyle(document.documentElement)
+    console.log(test)
+  })
+  const openModal = () => {
+    setOpen(!open)
+    document.documentElement.style.setProperty('overflow', 'hidden')
+  }
+
   return (
     <div className=" flex relative justify-center select-none">
-      <div className="md:grid grid-cols-2 py-4 cursor-pointer ">
+      <div className="md:grid grid-cols-2 py-4 cursor-pointer  ">
         <div className=" px-8 md:px-14 text-white opacity-100">
           {props.theme.map((slide, index) => {
             return (
@@ -79,14 +85,18 @@ const Slider = (props) => {
                 key={index}
               >
                 {index === current && (
-                  <img src={slide.image} className="w-full md:w-[70%] " />
+                  <img
+                    src={slide.image}
+                    className="w-full md:w-[70%] "
+                    onClick={openModal}
+                  />
                 )}
               </div>
             )
           })}
         </div>
       </div>
-      {modal && <Modal setModal={setModal} />}
+      {<Modal open={open} setOpen={setOpen} />}
     </div>
   )
 }

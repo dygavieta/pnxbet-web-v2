@@ -22,7 +22,7 @@ const Navbar = () => {
   const handleDrop = () => setDrop(!drop)
 
   return (
-    <div className="w-full h-[80px] z-50 bg-black fixed drop-shadow-sm">
+    <div className="w-full h-[80px] z-50 bg-black fixed drop-shadow-sm ">
       <div className="px-2 flex justify-between items-center h-full text-rose-50">
         <div className="flex items-center">
           <h1 className="text-3xl font-bold mr-4 sm:text-4xl"> PNXBET</h1>

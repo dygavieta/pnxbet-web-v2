@@ -1,6 +1,5 @@
 const RegisContents = [
   {
-    id: 1,
     image: require('../../assets/register-slides/reg1.png'),
     head: 'OPEN THE LINK.',
     link: 'https://bit.ly/pnxbet-online-casino',
