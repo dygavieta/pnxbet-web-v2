@@ -1,4 +1,4 @@
-const RegisContents = [
+const RegiContent = [
   {
     image: require('../../assets/register-slides/reg1.png'),
     head: 'OPEN THE LINK.',
@@ -35,4 +35,4 @@ const RegisContents = [
   },
 ]
 
-export default RegisContents
+export default RegiContent

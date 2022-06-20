@@ -25,4 +25,12 @@
   .slideArrow {
     @apply absolute text-orange-600 w-10  top-[50%] z-10 cursor-pointer;
   }
+
+  .modal-image {
+    text-align: -webkit-center;
+  }
+
+  .bg-opacity-98 {
+    opacity: 0.98;
+  }
 }

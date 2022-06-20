@@ -1,5 +1,6 @@
 const VerifyContent = [
   {
+    aw: 'registration_guide',
     image: require('../../assets/verify-slides/verify1.png'),
     head: 'EDIT PROFILE.',
     sub: [
@@ -9,6 +10,7 @@ const VerifyContent = [
     ],
   },
   {
+    aw: 'registration_guide',
     image: require('../../assets/verify-slides/verify2.png'),
     head: 'UPLOAD ID DOCUMENT',
     sub: [
@@ -17,8 +19,10 @@ const VerifyContent = [
       'c.) Select type of ID',
       'd.) Upload the ID DOCUMENT',
     ],
+    note: 'Note: All corners, edges should be visible on the document',
   },
   {
+    aw: 'registration_guide',
     image: require('../../assets/verify-slides/verify3.png'),
     head: 'UPLOAD SELFIE DOCUMENT.',
     sub: [
@@ -27,8 +31,10 @@ const VerifyContent = [
       'c.) Select type of ID',
       'd.) Upload the ID DOCUMENT',
     ],
+    note: 'Note: ID details must be clear and readable',
   },
   {
+    aw: 'registration_guide',
     image: require('../../assets/verify-slides/verify4.png'),
     head: 'WAIT FOR APPROVAL.',
     sub: [

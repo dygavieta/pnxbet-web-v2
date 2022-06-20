@@ -1,42 +1,38 @@
 import React from 'react'
 
-import regis from '../assets/register-slides/regis-name.png'
 import { XIcon } from '@heroicons/react/outline'
-
-const Modal = ({ open, setOpen }) => {
+import { useNavigate } from 'react-router-dom'
+const Modal = ({ open, setOpen, banner, setDelay, children }) => {
+  const navigate = useNavigate()
   const closeModal = () => {
     setOpen(false)
+    setDelay(true)
     document.documentElement.style.setProperty('overflow', 'visible')
+    navigate('/guides')
   }
+
   return (
     <>
       {open && (
-        <div className="w-full">
-          <div className="fixed mx-auto mt-20 bg-gray-500 inset-0 z-10 opacity-100    overflow-scroll ">
-            <div className="flex place-content-end h-[80px] bg-fuchsia-600 ">
-              <XIcon className=" w-7 cursor-pointer" onClick={closeModal} />
+        <div
+          className="fixed mx-auto bg-gray-300 inset-0 z-50 bg-opacity-98 overflow-scroll "
+          name="guides#registration"
+        >
+          <div className="flex bg-black justify-between items-center h-[120px] opacity-100 px-5">
+            <h1 className="text-3xl text-white font-bold mr-4 sm:text-4xl">
+              PNXBET
+            </h1>
+            <XIcon
+              className=" w-7 cursor-pointer text-white"
+              onClick={closeModal}
+            />
+          </div>
+          <hr className="border-zinc-900"></hr>
+          <div className="max-w-[1240px] h-screen white mx-auto py-2 px-5">
+            <div>
+              <img src={banner} alt="/" />
             </div>
-
-            <div className="max-w-[1240px] h-screen bg-gray-500 p-28 mx-auto  ">
-              <div>
-                <img src={regis} />
-              </div>
-              <div>
-                <img src={regis} />
-              </div>
-              <div>
-                <img src={regis} />
-              </div>
-              <div>
-                <img src={regis} />
-              </div>
-              <div>
-                <img src={regis} />
-              </div>
-              <div>
-                <img src={regis} />
-              </div>
-            </div>
+            {children}
           </div>
         </div>
       )}

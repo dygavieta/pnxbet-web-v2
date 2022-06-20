@@ -42,7 +42,7 @@ const Navbar = () => {
               onMouseOver={() => setDrop(true)}
               onMouseLeave={() => setDrop(false)}
             >
-              <Link to="/#guides" onClick={scrollToGuide}>
+              <Link to="/guides" onClick={() => window.scrollTo(0, 0)}>
                 Guides
               </Link>
               {drop && (
@@ -58,42 +58,30 @@ const Navbar = () => {
                     tabindex="-1"
                   >
                     <div className="py-1 ">
-                      <a
-                        href="/guides/registration_guide"
+                      <Link
                         className="text-gray-700 font-semibold block px-4 py-2 text-sm border-b-2 hover:underline"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-0"
+                        to="/guides/registration_guide"
                       >
                         Registration Guide
-                      </a>
-                      <a
-                        href="/guides/#verification_guide"
-                        className="text-gray-700 font-semibold  block px-4 py-2 text-sm border-b-2 hover:underline"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-1"
+                      </Link>
+                      <Link
+                        className="text-gray-700 font-semibold block px-4 py-2 text-sm border-b-2 hover:underline"
+                        to="/guides/verification_guide"
                       >
                         Verification Guide
-                      </a>
-                      <a
-                        href="/guides/#deposit_guide"
-                        className="text-gray-700 font-semibold  block px-4 py-2 text-sm border-b-2 hover:underline"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-2"
+                      </Link>
+                      <Link
+                        className="text-gray-700 font-semibold block px-4 py-2 text-sm border-b-2 hover:underline"
+                        to="/guides/deposit_guide"
                       >
                         Deposit Guide
-                      </a>
-                      <a
-                        href="/guides/#withdrawal_guide"
-                        className="text-gray-700 font-semibold  block px-4 py-2 text-sm hover:underline"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-2"
+                      </Link>
+                      <Link
+                        className="text-gray-700 font-semibold block px-4 py-2 text-sm  hover:underline"
+                        to="/guides/withdrawal_guide"
                       >
                         Withdrawal Guide
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -147,10 +135,10 @@ const Navbar = () => {
           </li>
           <li className="flex border-b-2 border-gray-900 hover:cursor-pointer ">
             <Link
-              to="/#guides"
+              to="/guides"
               onClick={() => {
                 handleClose()
-                scrollToGuide()
+                window.scrollTo(0, 0)
               }}
             >
               Guides
@@ -175,23 +163,40 @@ const Navbar = () => {
           {drop && (
             <div className="text-left" onMouseEnter={() => setDrop(true)}>
               <li className="border-b-2  px-8 border-gray-900 hover:cursor-pointer ">
-                <a
-                  href="/guides/#withdrawal_guide"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-1"
+                <Link
+                  to="/guides/registration_guide"
+                  onClick={() => {
+                    handleClose()
+                  }}
                 >
                   Registration Guide
-                </a>
+                </Link>
               </li>
               <li className="border-b-2  px-8 border-gray-900 hover:cursor-pointer ">
-                Verification Guide
+                <Link
+                  to="/guides/verification_guide"
+                  onClick={() => {
+                    handleClose()
+                  }}
+                >
+                  Verification Guide
+                </Link>
               </li>
-              <li className="border-b-2  px-8 border-gray-900 hover:cursor-pointer ">
-                Deposit Guide
+              <li
+                className="border-b-2  px-8 border-gray-900 hover:cursor-pointer"
+                onClick={() => {
+                  handleClose()
+                }}
+              >
+                <Link to="/guides/deposit_guide">Deposit Guide</Link>
               </li>
-              <li className="border-b-2  px-8 border-gray-900 hover:cursor-pointer ">
-                Withdrawal Guide
+              <li
+                className="border-b-2  px-8 border-gray-900 hover:cursor-pointer"
+                onClick={() => {
+                  handleClose()
+                }}
+              >
+                <Link to="/guides/withdrawal_guide">Withdrawal Guide</Link>
               </li>
             </div>
           )}

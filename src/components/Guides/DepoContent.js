@@ -2,6 +2,11 @@ const DepoContent = [
   {
     image: require('../../assets/deposit-slides/depo1.png'),
     head: 'DEPOSIT VIA BITCOIN.',
+    sub: [],
+  },
+  {
+    image: require('../../assets/deposit-slides/depo2.png'),
+    head: 'DEPOSIT VIA BITCOIN.',
     sub: [
       'a.) Go to My Wallet > Deposit section',
       'b.) Click paxful withdrawal option',
@@ -10,24 +15,20 @@ const DepoContent = [
     ],
   },
   {
-    image: require('../../assets/deposit-slides/depo2.png'),
+    image: require('../../assets/deposit-slides/depo3.png'),
     head: 'DEPOSIT VIA VOUCHER CODES',
-    sub: [
-      'a.) Take a picture of your valid ID on a flat surface with good quality',
-      'b.) Go to My Profile -> Documents',
-      'c.) Select type of ID',
-      'd.) Upload the ID DOCUMENT',
-    ],
+    sub: [],
   },
   {
-    image: require('../../assets/deposit-slides/depo1.png'),
+    image: require('../../assets/deposit-slides/depo3.png'),
     head: 'DEPOSIT VIA VOUCHER CODES',
     sub: [
-      'a.) Take a picture of your valid ID on a flat surface with good quality',
-      'b.) Go to My Profile > Documents',
-      'c.) Select type of ID',
-      'd.) Upload the ID DOCUMENT',
+      'a.) Click www.pnxbetforum.com',
+      'b.) Go to "Voucher Resellers" section to buy PNXBET voucher code',
+      'c.) Transact only with users that has "Verified Seller" rank/badge',
+      'd.) Use the given code at pnxbet deposit page',
     ],
+    link: 'www.pnxbetforum.com',
   },
 ]
 
