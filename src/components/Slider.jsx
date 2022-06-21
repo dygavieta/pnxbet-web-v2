@@ -32,8 +32,8 @@ const Slider = (props) => {
     return () => clearInterval(interval)
   })
 
-  const RedirectPage = () => {
-    window.open('https://pnxbet.com/affiliates/?btag=209088')
+  function RedirectPage(path) {
+    window.open(path)
   }
 
   // Open modal and delays slider
@@ -66,7 +66,7 @@ const Slider = (props) => {
                     <h1 className="text-4xl md:text-6xl"> {slide.head} </h1>
                     <a
                       className="text-1xl md:text-3xl hover:cursor-pointer hover:text-orange-600"
-                      onClick={RedirectPage}
+                      onClick={() => RedirectPage(slide.link)}
                     >
                       {slide.link}
                     </a>
@@ -127,7 +127,7 @@ const Slider = (props) => {
                 <h1 className="text-4xl md:text-5xl"> {slide.head} </h1>
                 <a
                   className="text-1xl md:text-3xl hover:cursor-pointer hover:text-orange-600"
-                  onClick={RedirectPage}
+                  onClick={() => RedirectPage(slide.link)}
                 >
                   {slide.link}
                 </a>

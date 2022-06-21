@@ -2,7 +2,7 @@ const RegiContent = [
   {
     image: require('../../assets/register-slides/reg1.png'),
     head: 'OPEN THE LINK.',
-    link: 'https://bit.ly/pnxbet-online-casino',
+    link: 'https://bit.ly/pnxbet_online_casino',
     sub: [''],
   },
   {

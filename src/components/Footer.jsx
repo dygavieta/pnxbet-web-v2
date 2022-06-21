@@ -7,27 +7,59 @@ const Footer = () => {
         <div>
           <h6 className="font-bold uppercase pt-2">Products</h6>
           <ul>
-            <li className="py-1">Live Casino</li>
-            <li className="py-1">Slot Machines</li>
-            <li className="py-1">Sports Betting</li>
-            <li className="py-1">E-Sports Betting</li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/live-casino?btag=209088">
+                Live Casino
+              </a>
+            </li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/casino#/all?btag=209088">Casino</a>
+            </li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/pre-match?btag=209088">Sports</a>
+            </li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/esports?btag=209088">E-Sports</a>
+            </li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/poker?btag=209088">Poker</a>
+            </li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/virtual#/edgegaming?btag=209088">
+                Virtual
+              </a>
+            </li>
           </ul>
         </div>
         <div>
           <h6 className="font-bold uppercase pt-2">Help</h6>
           <ul>
-            <li className="py-1">Faqs</li>
-            <li className="py-1">Sports Betting Rules</li>
-            <li className="py-1">Mirror Link</li>
-            <li className="py-1">Promotions</li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/faqs?btag=209088">Faqs</a>
+            </li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/sport-betting-rules?btag=209088">
+                Sports Betting Rules
+              </a>
+            </li>
+            <li className="footItem">
+              <a href="https://pnxbet.one">Mirror Link</a>
+            </li>
+            <li className="footItem">
+              <a href="https://www.pnxbet.io/promotions?btag=209088">
+                Promotions
+              </a>
+            </li>
           </ul>
         </div>
         <div>
           <h6 className="font-bold uppercase pt-2">Social</h6>
           <ul>
-            <li className="py-1">FB</li>
-            <li className="py-1">Twitter</li>
-            <li className="py-1">Insta</li>
+            <li className="footItem font-semibold uppercase pt-2 hover:text-slate-600">
+              FB ICON
+            </li>
+            <li className="footItem">Twitter ICON</li>
+            <li className="footItem">Insta ICON</li>
           </ul>
         </div>
         <div className="text-left">

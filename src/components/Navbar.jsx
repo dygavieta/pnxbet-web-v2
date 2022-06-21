@@ -59,25 +59,22 @@ const Navbar = () => {
                   >
                     <div className="py-1 ">
                       <Link
-                        className="text-gray-700 font-semibold block px-4 py-2 text-sm border-b-2 hover:underline"
+                        className="navSubItem"
                         to="/guides/registration_guide"
                       >
                         Registration Guide
                       </Link>
                       <Link
-                        className="text-gray-700 font-semibold block px-4 py-2 text-sm border-b-2 hover:underline"
+                        className="navSubItem"
                         to="/guides/verification_guide"
                       >
                         Verification Guide
                       </Link>
-                      <Link
-                        className="text-gray-700 font-semibold block px-4 py-2 text-sm border-b-2 hover:underline"
-                        to="/guides/deposit_guide"
-                      >
+                      <Link className="navSubItem" to="/guides/deposit_guide">
                         Deposit Guide
                       </Link>
                       <Link
-                        className="text-gray-700 font-semibold block px-4 py-2 text-sm  hover:underline"
+                        className="navSubItem border-b-0"
                         to="/guides/withdrawal_guide"
                       >
                         Withdrawal Guide
@@ -90,10 +87,20 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="hidden md:flex pr-4">
-          <button className="bg-orange-600   text-white mr-2 hover:bg-orange-700 border-orange-700">
+          <button
+            className="bg-orange-600   text-white mr-2 hover:bg-orange-700 border-orange-700"
+            onClick={() =>
+              window.open('https://www.pnxbet.io/?btag=209088#?sign-in')
+            }
+          >
             Sign in
           </button>
-          <button className="bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700">
+          <button
+            className="bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700"
+            onClick={() =>
+              window.open(' https://www.pnxbet.io/?btag=209088#?sign-up')
+            }
+          >
             Register
           </button>
         </div>
@@ -201,10 +208,20 @@ const Navbar = () => {
             </div>
           )}
           <div className="flex flex-col my-2 ">
-            <button className="bg-orange-600  text-white mr-2 hover:bg-orange-700 border-orange-700 w-full">
+            <button
+              className="bg-orange-600  text-white mr-2 hover:bg-orange-700 border-orange-700 w-full"
+              onClick={() =>
+                window.open('https://www.pnxbet.io/#?sign-in/?btag=209088')
+              }
+            >
               Sign in
             </button>
-            <button className="bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700  w-full my-2 ">
+            <button
+              className="bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700  w-full my-2 "
+              onClick={() =>
+                window.open(' https://www.pnxbet.io/?btag=209088#?sign-up')
+              }
+            >
               Register
             </button>
           </div>

@@ -23,12 +23,12 @@ const DepoContent = [
     image: require('../../assets/deposit-slides/depo3.png'),
     head: 'DEPOSIT VIA VOUCHER CODES',
     sub: [
-      'a.) Click www.pnxbetforum.com',
+      'a.) Click https://pnxbetforum.com',
       'b.) Go to "Voucher Resellers" section to buy PNXBET voucher code',
       'c.) Transact only with users that has "Verified Seller" rank/badge',
       'd.) Use the given code at pnxbet deposit page',
     ],
-    link: 'www.pnxbetforum.com',
+    link: 'https://pnxbetforum.com',
   },
 ]
 
