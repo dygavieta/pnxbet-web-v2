@@ -15,7 +15,7 @@
     @apply flex px-2 py-2 font-semibold items-center text-xs text-slate-300  md:text-xl flex-col;
   }
   .heroIcon {
-    @apply w-[30%] hover:animate-bounce hover:cursor-pointer;
+    @apply w-[30%] hover:animate-bounce;
   }
 
   .navSubItem {
@@ -34,7 +34,7 @@
   }
 
   .slideArrow {
-    @apply absolute text-orange-600 w-10  top-[50%] z-10 cursor-pointer;
+    @apply absolute text-orange-500 w-10  top-[50%] z-10 cursor-pointer hover:text-orange-700;
   }
 
   .modal-image {
@@ -43,5 +43,14 @@
 
   .bg-opacity-98 {
     opacity: 0.98;
+  }
+
+  .dot {
+    margin: 1px;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
   }
 }

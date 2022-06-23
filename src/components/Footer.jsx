@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className="w-full py-2 px-2 bg-black">
-      <div className="max-w-[1240px] mx-auto grid md:grid-cols-4 border-b-2 border-black py-8 text-white">
+      <div className="max-w-[1240px] mx-auto grid grid-cols-3 md:grid-cols-4 border-b-2 border-black py-8 text-white">
         <div>
           <h6 className="font-bold uppercase pt-2">Products</h6>
           <ul>
@@ -52,7 +52,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="">
           <h6 className="font-bold uppercase pt-2">Social</h6>
           <ul>
             <li className="footItem font-semibold uppercase pt-2 hover:text-slate-600">
@@ -62,10 +62,10 @@ const Footer = () => {
             <li className="footItem">Insta ICON</li>
           </ul>
         </div>
-        <div className="text-left">
+        <div className="text-center text-white   col-span-3 md:col-auto  ">
           <h6 className="font-semibold uppercase pt-2">
-            © 2019-2022 PNXBET Gaming License №365/JAZ
-            <p>All rights reserved and protected by law.</p>
+            <p>All rights reserved and protected by law.</p>© 2019-2022 PNXBET
+            Gaming License №365/JAZ
           </h6>
         </div>
       </div>

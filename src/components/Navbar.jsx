@@ -18,7 +18,10 @@ const Navbar = () => {
   const [drop, setDrop] = useState(false)
 
   const handleNav = () => setNav(!nav)
-  const handleClose = () => setNav(!nav)
+  const handleClose = () => {
+    setNav(!nav)
+    setDrop(false)
+  }
   const handleDrop = () => setDrop(!drop)
 
   return (

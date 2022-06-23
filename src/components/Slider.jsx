@@ -13,6 +13,7 @@ const Slider = (props) => {
 
   let { guide } = useParams()
   const length = props.theme.length
+  console.log(length + ' leght ni')
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1)
   const prevSlide = () => setCurrent(current === 0 ? length - 1 : current - 1)
 
@@ -85,7 +86,7 @@ const Slider = (props) => {
         </div>
         <div className="flex items-center justify-center">
           <ArrowCircleLeftIcon
-            className="slideArrow left-0"
+            className="slideArrow left-0 "
             onClick={prevSlide}
           />
           <ArrowCircleRightIcon
@@ -109,6 +110,15 @@ const Slider = (props) => {
                   />
                 )}
               </div>
+            )
+          })}
+        </div>
+        <div className="col-span-2 text-center ">
+          {Array.from({ length: length }).map((item, index) => {
+            return (
+              <span
+                className={index === current ? 'dot bg-orange-600' : 'dot'}
+              ></span>
             )
           })}
         </div>
