@@ -24,7 +24,7 @@ const Hero = () => {
             A premiere licensed, cyprto-based online casino
           </p>
           <button className="animate-pulse bg-orange-600 border-orange-600 text-white w-[70%]">
-            Bet Now
+            BET NOW
           </button>
         </div>
         <div>

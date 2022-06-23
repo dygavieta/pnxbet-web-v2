@@ -27,8 +27,12 @@ const Navbar = () => {
   return (
     <div className="w-full h-[80px] z-50 bg-black fixed drop-shadow-sm ">
       <div className="px-2 flex justify-between items-center h-full text-rose-50">
-        <div className="flex items-center">
-          <h1 className="text-3xl font-bold mr-4 sm:text-4xl"> PNXBET</h1>
+        <div className="flex items-center uppercase">
+          <h1 className="text-3xl font-bold mr-4 sm:text-4xl">
+            <Link to="/" onClick={scrollToHero}>
+              Pnxbet
+            </Link>
+          </h1>
           <ul className="hidden md:flex items-center">
             <li className="hover:cursor-pointer ">
               <Link to="/" onClick={scrollToHero}>
@@ -46,7 +50,7 @@ const Navbar = () => {
               onMouseLeave={() => setDrop(false)}
             >
               <Link to="/guides" onClick={() => window.scrollTo(0, 0)}>
-                Guides
+                Guide
               </Link>
               {drop && (
                 <div
@@ -89,9 +93,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden md:flex pr-4">
+        <div className="hidden md:flex pr-4 ">
           <button
-            className="bg-orange-600   text-white mr-2 hover:bg-orange-700 border-orange-700"
+            className="bg-orange-600  uppercase text-white mr-2 hover:bg-orange-700 border-orange-700"
             onClick={() =>
               window.open('https://www.pnxbet.io/?btag=209088#?sign-in')
             }
@@ -99,7 +103,7 @@ const Navbar = () => {
             Sign in
           </button>
           <button
-            className="bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700"
+            className="bg-transparent uppercase border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700"
             onClick={() =>
               window.open(' https://www.pnxbet.io/?btag=209088#?sign-up')
             }
@@ -117,7 +121,9 @@ const Navbar = () => {
       </div>
       <div
         className={
-          !nav ? 'hidden' : 'bg-black px-4 w-full md:hidden text-white '
+          !nav
+            ? 'hidden'
+            : 'bg-black px-4 w-full md:hidden text-white uppercase '
         }
       >
         <ul>
@@ -210,9 +216,9 @@ const Navbar = () => {
               </li>
             </div>
           )}
-          <div className="flex flex-col my-2 ">
+          <div className="flex flex-col my-2  ">
             <button
-              className="bg-orange-600  text-white mr-2 hover:bg-orange-700 border-orange-700 w-full"
+              className="bg-orange-600  text-white mr-2 hover:bg-orange-700 border-orange-700 uppercase w-full"
               onClick={() =>
                 window.open('https://www.pnxbet.io/#?sign-in/?btag=209088')
               }
@@ -220,7 +226,7 @@ const Navbar = () => {
               Sign in
             </button>
             <button
-              className="bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700  w-full my-2 "
+              className="bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700 uppercase w-full my-2 "
               onClick={() =>
                 window.open(' https://www.pnxbet.io/?btag=209088#?sign-up')
               }
