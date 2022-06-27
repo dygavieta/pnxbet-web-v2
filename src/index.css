@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  h1 {
+    @apply text-2xl;
+  }
+
   html {
     font-family: 'Montserrat', sans-serif !important;
   }
@@ -18,7 +22,7 @@
     @apply flex px-2 py-2 font-semibold items-center text-xs text-slate-300  md:text-xl flex-col;
   }
   .heroIcon {
-    @apply w-[30%] hover:animate-bounce;
+    @apply w-[30%];
   }
 
   .navSubItem {

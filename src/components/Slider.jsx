@@ -13,7 +13,6 @@ const Slider = (props) => {
 
   let { guide } = useParams()
   const length = props.theme.length
-  console.log(length + ' leght ni')
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1)
   const prevSlide = () => setCurrent(current === 0 ? length - 1 : current - 1)
 
@@ -61,6 +60,7 @@ const Slider = (props) => {
                 className={
                   index === current ? 'ease-in duration-1000' : 'opacity-0'
                 }
+                key={index}
               >
                 {index === current && (
                   <div>
@@ -71,8 +71,12 @@ const Slider = (props) => {
                     >
                       {slide.link}
                     </a>
-                    {slide.sub.map((line) => {
-                      return <p className="text-sm md:text-xl">{line}</p>
+                    {slide.sub.map((line, index) => {
+                      return (
+                        <p className="text-sm md:text-xl" key={index}>
+                          {line}
+                        </p>
+                      )
                     })}
 
                     <p className="text-sm md:text-xl text-red-400">

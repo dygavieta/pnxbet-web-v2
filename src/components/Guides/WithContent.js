@@ -1,5 +1,6 @@
 const WithContent = [
   {
+    id: 1,
     image: require('../../assets/withdraw-slides/with1.png'),
     head: 'WITHDRAW VIA BITCOIN.',
     sub: [

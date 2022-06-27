@@ -1,10 +1,12 @@
 const DepoContent = [
   {
+    id: 1,
     image: require('../../assets/deposit-slides/depo1.png'),
     head: 'DEPOSIT VIA BITCOIN.',
     sub: [],
   },
   {
+    id: 2,
     image: require('../../assets/deposit-slides/depo2.png'),
     head: 'DEPOSIT VIA BITCOIN.',
     sub: [
@@ -15,11 +17,13 @@ const DepoContent = [
     ],
   },
   {
+    id: 3,
     image: require('../../assets/deposit-slides/depo3.png'),
     head: 'DEPOSIT VIA VOUCHER CODES',
     sub: [],
   },
   {
+    id: 4,
     image: require('../../assets/deposit-slides/depo3.png'),
     head: 'DEPOSIT VIA VOUCHER CODES',
     sub: [

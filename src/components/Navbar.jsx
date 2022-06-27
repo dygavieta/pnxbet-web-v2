@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const [drop, setDrop] = useState(false)
-
   const handleNav = () => setNav(!nav)
   const handleClose = () => {
     setNav(!nav)
@@ -28,13 +27,13 @@ const Navbar = () => {
     <div className="w-full h-[80px] z-50 bg-black fixed drop-shadow-sm ">
       <div className="px-2 flex justify-between items-center h-full text-rose-50">
         <div className="flex items-center uppercase">
-          <h1 className="text-3xl font-bold mr-4 sm:text-4xl">
+          <h1 className="text-3xl font-bold mr-4 sm:text-4xl ">
             <Link to="/" onClick={scrollToHero}>
               Pnxbet
             </Link>
           </h1>
           <ul className="hidden md:flex items-center">
-            <li className="hover:cursor-pointer ">
+            <li className="hover:cursor-pointer">
               <Link to="/" onClick={scrollToHero}>
                 Home
               </Link>

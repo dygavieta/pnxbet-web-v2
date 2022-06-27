@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <div
       name="hero"
-      className="w-full h-full flex flex-col justify-between  py-28 bg-gradient-to-b from-orange-600 via-yellow-700 to-black"
+      className="w-full h-full flex flex-col justify-between  py-28 bg-gradient-to-b from-orange-600 via-yellow-700 to-black select-none"
     >
       <div className=" max-w-[1240px] m-auto md:grid grid-flow-row-dense grid-cols-2  ">
         <div className="flex flex-col justify-center md:items-start w-full px-2  ">

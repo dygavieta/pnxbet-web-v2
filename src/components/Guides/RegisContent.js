@@ -1,16 +1,19 @@
 const RegiContent = [
   {
+    id: 1,
     image: require('../../assets/register-slides/reg1.png'),
     head: 'OPEN THE LINK.',
     link: 'https://bit.ly/pnxbet_online_casino',
     sub: [''],
   },
   {
+    id: 2,
     image: require('../../assets/register-slides/reg2.png'),
     head: 'CLICK REGISTER.',
     sub: [''],
   },
   {
+    id: 3,
     image: require('../../assets/register-slides/reg3.png'),
     head: 'FILL UP THE FORM.',
     sub: [
@@ -22,6 +25,7 @@ const RegiContent = [
     ],
   },
   {
+    id: 4,
     image: require('../../assets/register-slides/reg5.png'),
     head: 'VALIDATE YOUR ACCOUNT.',
     sub: [
@@ -29,6 +33,7 @@ const RegiContent = [
     ],
   },
   {
+    id: 5,
     image: require('../../assets/register-slides/reg4.png'),
     head: 'SIGN IN TO YOUR ACCOUNT.',
     sub: [''],

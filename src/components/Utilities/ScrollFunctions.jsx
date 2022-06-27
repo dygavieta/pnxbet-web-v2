@@ -6,7 +6,7 @@ export const scrollToHero = () => {
     spy: true,
     smooth: true,
     duration: 1000,
-    delay: 300,
+    delay: 200,
   })
 }
 
@@ -16,7 +16,6 @@ export const scrollToAbout = () => {
     smooth: true,
     offset: -150,
     duration: 1000,
-    delay: 300,
   })
 }
 
