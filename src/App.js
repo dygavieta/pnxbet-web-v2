@@ -4,16 +4,18 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Home from './components/Pages/Home'
 import Guide from './components/Pages/Guide'
+import PageNotFound from './components/Pages/PageNotFound'
 function App() {
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="home" element={<Home />} />
-          <Route path="" element={<Home />} />
-          <Route path="/guides" element={<Guide />} />
-          <Route path="/guides/:guide" element={<Guide />} />
+          <Route exact path="home" element={<Home />} />
+          <Route exact path="" element={<Home />} />
+          <Route exact path="/guides" element={<Guide />} />
+          <Route exact path="/guides/:guide" element={<Guide />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </Router>

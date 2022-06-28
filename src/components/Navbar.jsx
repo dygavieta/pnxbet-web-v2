@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-import {
-  scrollToHero,
-  scrollToAbout,
-  scrollToGuide,
-} from './Utilities/ScrollFunctions'
+import { scrollToHero, scrollToAbout } from './Utilities/ScrollFunctions'
 import {
   MenuIcon,
   XIcon,
@@ -34,12 +30,12 @@ const Navbar = () => {
           </h1>
           <ul className="hidden md:flex items-center">
             <li className="hover:cursor-pointer">
-              <Link to="/" onClick={scrollToHero}>
+              <Link to="/" onClick={scrollToHero} itemProp="url">
                 Home
               </Link>
             </li>
             <li className="hover:cursor-pointer">
-              <Link to="/#about" onClick={scrollToAbout}>
+              <Link to="/#about" onClick={scrollToAbout} itemProp="url">
                 About Us
               </Link>
             </li>
@@ -48,7 +44,11 @@ const Navbar = () => {
               onMouseOver={() => setDrop(true)}
               onMouseLeave={() => setDrop(false)}
             >
-              <Link to="/guides" onClick={() => window.scrollTo(0, 0)}>
+              <Link
+                to="/guides"
+                onClick={() => window.scrollTo(0, 0)}
+                itemProp="url"
+              >
                 Guide
               </Link>
               {drop && (
@@ -67,21 +67,28 @@ const Navbar = () => {
                       <Link
                         className="navSubItem"
                         to="/guides/registration_guide"
+                        itemProp="url"
                       >
                         Registration Guide
                       </Link>
                       <Link
                         className="navSubItem"
                         to="/guides/verification_guide"
+                        itemProp="url"
                       >
                         Verification Guide
                       </Link>
-                      <Link className="navSubItem" to="/guides/deposit_guide">
+                      <Link
+                        className="navSubItem"
+                        to="/guides/deposit_guide"
+                        itemProp="url"
+                      >
                         Deposit Guide
                       </Link>
                       <Link
                         className="navSubItem border-b-0"
                         to="/guides/withdrawal_guide"
+                        itemProp="url"
                       >
                         Withdrawal Guide
                       </Link>
@@ -98,6 +105,7 @@ const Navbar = () => {
             onClick={() =>
               window.open('https://www.pnxbet.io/?btag=209088#?sign-in')
             }
+            itemProp="url"
           >
             Sign in
           </button>
@@ -106,6 +114,7 @@ const Navbar = () => {
             onClick={() =>
               window.open(' https://www.pnxbet.io/?btag=209088#?sign-up')
             }
+            itemProp="url"
           >
             Register
           </button>

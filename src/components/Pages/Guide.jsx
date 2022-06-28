@@ -2,8 +2,8 @@ import React from 'react'
 
 import regis from '../../assets/register-slides/regis-name.png'
 import verify from '../../assets/verify-slides/verify-name.png'
-import withdraw from '../../assets/with-name.png'
-import deposit from '../../assets/depo-name.png'
+import deposit from '../../assets/deposit-slides/depo-name.png'
+import withdraw from '../../assets/withdraw-slides/with-name.png'
 
 import Slider from '../Slider'
 import RegisContent from '../Guides/RegisContent'
