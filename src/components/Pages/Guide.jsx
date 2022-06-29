@@ -11,7 +11,10 @@ import VerifyContent from '../Guides/VerifyContent'
 import DepoContent from '../Guides/DepoContent'
 import WithContent from '../Guides/WithContent'
 
+import { ChangeTitle } from '../Utilities/BasicFunctions'
+
 const Guide = () => {
+  ChangeTitle('PNXBET - Guide Section')
   return (
     <div className="h-full w-full px-2 py-28 bg-black">
       <div className="max-w-[1240px] mx-auto ">
@@ -20,6 +23,7 @@ const Guide = () => {
             <img src={regis} alt="" className="w-full" />
           </div>
           <Slider
+            url={'PNXBET - Registration Guide'}
             theme={RegisContent}
             banner={regis}
             modalName={'registration_guide'}
@@ -30,6 +34,7 @@ const Guide = () => {
             <img src={verify} alt="" className="w-full" />
           </div>
           <Slider
+            url={'PNXBET - Verification Guide'}
             theme={VerifyContent}
             banner={verify}
             modalName={'verification_guide'}
@@ -40,6 +45,7 @@ const Guide = () => {
             <img src={deposit} alt="" className="w-full" />
           </div>
           <Slider
+            url={'PNXBET - Deposit Guide'}
             theme={DepoContent}
             banner={deposit}
             modalName={'deposit_guide'}
@@ -50,6 +56,7 @@ const Guide = () => {
             <img src={withdraw} alt="" className="w-full" />
           </div>
           <Slider
+            url={'PNXBET - Withdrawal Guide'}
             theme={WithContent}
             banner={withdraw}
             modalName={'withdrawal_guide'}

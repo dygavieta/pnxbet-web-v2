@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { scrollToHero, scrollToAbout } from './Utilities/ScrollFunctions'
 import {
   MenuIcon,
@@ -6,10 +6,9 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
 } from '@heroicons/react/outline'
-
 import { Link } from 'react-router-dom'
-
 const Navbar = () => {
+  const [activeLink, setActiveLink] = useState('')
   const [nav, setNav] = useState(false)
   const [drop, setDrop] = useState(false)
   const handleNav = () => setNav(!nav)
@@ -19,6 +18,10 @@ const Navbar = () => {
   }
   const handleDrop = () => setDrop(!drop)
 
+  useEffect(() => {
+    const url = window.location.href.split('/')
+    setActiveLink(url[3])
+  }, [activeLink])
   return (
     <div className="w-full h-[80px] z-50 bg-black fixed drop-shadow-sm ">
       <div className="px-2 flex justify-between items-center h-full text-rose-50">
@@ -29,45 +32,61 @@ const Navbar = () => {
             </Link>
           </h1>
           <ul className="hidden md:flex items-center">
-            <li className="hover:cursor-pointer">
-              <Link to="/" onClick={scrollToHero} itemProp="url">
+            <li>
+              <Link
+                className={activeLink === '' ? 'navItem active' : 'navItem '}
+                onClick={() => {
+                  scrollToHero()
+                  setActiveLink('home')
+                }}
+                to="/"
+              >
                 Home
               </Link>
             </li>
-            <li className="hover:cursor-pointer">
-              <Link to="/#about" onClick={scrollToAbout} itemProp="url">
+            <li>
+              <Link
+                className={
+                  activeLink === '#about' ? 'navItem active' : 'navItem '
+                }
+                onClick={() => {
+                  scrollToAbout()
+                  setActiveLink('about')
+                }}
+                to="/#about"
+              >
                 About Us
               </Link>
             </li>
             <li
-              className="hover:cursor-pointer "
               onMouseOver={() => setDrop(true)}
               onMouseLeave={() => setDrop(false)}
             >
               <Link
+                className={
+                  activeLink === 'guides' ? 'navItem active' : 'navItem '
+                }
+                onClick={() => {
+                  setActiveLink('guides')
+                }}
                 to="/guides"
-                onClick={() => window.scrollTo(0, 0)}
-                itemProp="url"
               >
-                Guide
+                Guides
               </Link>
               {drop && (
                 <div
                   className="relative  text-left"
                   onMouseEnter={() => setDrop(true)}
                 >
-                  <div
-                    className="absolute mt-4 w-56 rounded-md shadow-lg  bg-white ring-1 "
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="menu-button"
-                    tabindex="-1"
-                  >
+                  <div className="absolute mt-3 w-56 rounded-md shadow-lg  bg-white  ">
                     <div className="py-1 ">
                       <Link
                         className="navSubItem"
                         to="/guides/registration_guide"
                         itemProp="url"
+                        onClick={() => {
+                          setActiveLink('guides')
+                        }}
                       >
                         Registration Guide
                       </Link>
@@ -75,6 +94,9 @@ const Navbar = () => {
                         className="navSubItem"
                         to="/guides/verification_guide"
                         itemProp="url"
+                        onClick={() => {
+                          setActiveLink('guides')
+                        }}
                       >
                         Verification Guide
                       </Link>
@@ -82,6 +104,9 @@ const Navbar = () => {
                         className="navSubItem"
                         to="/guides/deposit_guide"
                         itemProp="url"
+                        onClick={() => {
+                          setActiveLink('guides')
+                        }}
                       >
                         Deposit Guide
                       </Link>
@@ -89,6 +114,9 @@ const Navbar = () => {
                         className="navSubItem border-b-0"
                         to="/guides/withdrawal_guide"
                         itemProp="url"
+                        onClick={() => {
+                          setActiveLink('guides')
+                        }}
                       >
                         Withdrawal Guide
                       </Link>
@@ -101,7 +129,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex pr-4 ">
           <button
-            className="bg-orange-600  uppercase text-white mr-2 hover:bg-orange-700 border-orange-700"
+            className="sign-in-btn"
             onClick={() =>
               window.open('https://www.pnxbet.io/?btag=209088#?sign-in')
             }
@@ -110,7 +138,7 @@ const Navbar = () => {
             Sign in
           </button>
           <button
-            className="bg-transparent uppercase border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700"
+            className="regis-btn"
             onClick={() =>
               window.open(' https://www.pnxbet.io/?btag=209088#?sign-up')
             }
@@ -121,47 +149,51 @@ const Navbar = () => {
         </div>
         <div className="md:hidden" onClick={handleNav}>
           {!nav ? (
-            <MenuIcon className="w-5  mx-4" />
+            <MenuIcon className="w-5 mx-4" />
           ) : (
-            <XIcon className="w-5  mx-4" onClick={() => setDrop(false)} />
+            <XIcon className="w-5 mx-4" onClick={() => setDrop(false)} />
           )}
         </div>
       </div>
-      <div
-        className={
-          !nav
-            ? 'hidden'
-            : 'bg-black px-4 w-full md:hidden text-white uppercase '
-        }
-      >
+      {/* Mobile */}
+      <div className={!nav ? 'hidden' : 'mnavContainer'}>
         <ul>
-          <li className="border-b-2 border-gray-900 hover:cursor-pointer ">
+          <li className={activeLink === '' ? 'mnavItem active' : 'mnavItem'}>
             <Link
-              to="/#Home"
+              to="/"
               onClick={() => {
                 handleClose()
                 scrollToHero()
+                setActiveLink('home')
               }}
             >
               Home
             </Link>
           </li>
-          <li className="border-b-2 border-gray-900 hover:cursor-pointer ">
+          <li
+            className={activeLink === '#about' ? 'mnavItem active' : 'mnavItem'}
+          >
             <Link
               to="/#about"
               onClick={() => {
                 handleClose()
                 scrollToAbout()
+                setActiveLink('#about')
               }}
             >
               About Us
             </Link>
           </li>
-          <li className="flex border-b-2 border-gray-900 hover:cursor-pointer ">
+          <li
+            className={
+              activeLink === 'guides' ? 'flex mnavItem active' : 'flex mnavItem'
+            }
+          >
             <Link
               to="/guides"
               onClick={() => {
                 handleClose()
+                setActiveLink('guides')
                 window.scrollTo(0, 0)
               }}
             >
@@ -171,14 +203,14 @@ const Navbar = () => {
             {!drop ? (
               <div>
                 <ChevronDownIcon
-                  className=" inline-block mx-2 w-5"
+                  className="mnav-dropdown-icon"
                   onClick={handleDrop}
                 />
               </div>
             ) : (
               <div>
                 <ChevronUpIcon
-                  className=" inline-block mx-2 w-5"
+                  className="mnav-dropdown-icon"
                   onClick={handleDrop}
                 />
               </div>
@@ -186,38 +218,42 @@ const Navbar = () => {
           </li>
           {drop && (
             <div className="text-left" onMouseEnter={() => setDrop(true)}>
-              <li className="border-b-2  px-8 border-gray-900 hover:cursor-pointer ">
+              <li className="mnavSubItem">
                 <Link
                   to="/guides/registration_guide"
                   onClick={() => {
                     handleClose()
+                    setActiveLink('guides')
                   }}
                 >
                   Registration Guide
                 </Link>
               </li>
-              <li className="border-b-2  px-8 border-gray-900 hover:cursor-pointer ">
+              <li className="mnavSubItem">
                 <Link
                   to="/guides/verification_guide"
                   onClick={() => {
                     handleClose()
+                    setActiveLink('guides')
                   }}
                 >
                   Verification Guide
                 </Link>
               </li>
               <li
-                className="border-b-2  px-8 border-gray-900 hover:cursor-pointer"
+                className="mnavSubItem"
                 onClick={() => {
                   handleClose()
+                  setActiveLink('guides')
                 }}
               >
                 <Link to="/guides/deposit_guide">Deposit Guide</Link>
               </li>
               <li
-                className="border-b-2  px-8 border-gray-900 hover:cursor-pointer"
+                className="mnavSubItem"
                 onClick={() => {
                   handleClose()
+                  setActiveLink('guides')
                 }}
               >
                 <Link to="/guides/withdrawal_guide">Withdrawal Guide</Link>
@@ -226,7 +262,7 @@ const Navbar = () => {
           )}
           <div className="flex flex-col my-2  ">
             <button
-              className="bg-orange-600  text-white mr-2 hover:bg-orange-700 border-orange-700 uppercase w-full"
+              className="msign-in-btn"
               onClick={() =>
                 window.open('https://www.pnxbet.io/#?sign-in/?btag=209088')
               }
@@ -234,7 +270,7 @@ const Navbar = () => {
               Sign in
             </button>
             <button
-              className="bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700 uppercase w-full my-2 "
+              className="mregist-btn"
               onClick={() =>
                 window.open(' https://www.pnxbet.io/?btag=209088#?sign-up')
               }

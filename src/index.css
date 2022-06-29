@@ -21,10 +21,51 @@
     @apply w-[30%];
   }
 
+  .navItem {
+    @apply hover:cursor-pointer hover:bg-orange-600 hover:rounded-3xl py-3 px-4 border-none;
+  }
+
+  .navItem.active {
+    @apply bg-orange-600 rounded-3xl;
+  }
   .navSubItem {
     @apply text-gray-700 font-semibold block px-4 py-2 text-sm border-b-2 hover:underline;
   }
 
+  .sign-in-btn {
+    @apply bg-orange-600  uppercase text-white mr-2 hover:bg-orange-700 border-orange-700;
+  }
+
+  .regis-btn {
+    @apply bg-transparent uppercase border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700;
+  }
+
+  .mnavContainer {
+    @apply bg-black px-4 w-full md:hidden text-white uppercase;
+  }
+
+  .mnav-dropdown-icon {
+    @apply inline-block mx-2 w-5;
+  }
+  .mnavItem {
+    @apply border-b-2 border-gray-900;
+  }
+
+  .mnavItem.active {
+    @apply text-orange-600;
+  }
+
+  .mnavSubItem {
+    @apply border-b-2  px-8 border-gray-900;
+  }
+
+  .msign-in-btn {
+    @apply bg-orange-600  text-white mr-2 hover:bg-orange-700 border-orange-700 uppercase w-full;
+  }
+
+  .mregist-btn {
+    @apply bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700 uppercase w-full my-2;
+  }
   .footItem {
     @apply py-1 font-semibold  pt-2  text-gray-200 text-sm;
   }

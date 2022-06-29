@@ -38,6 +38,7 @@ const Slider = (props) => {
 
   // Open modal and delays slider
   const openModal = () => {
+    document.title = props.url
     setOpen(true)
     setDelay(!delay)
     document.documentElement.style.setProperty('overflow', 'hidden')
@@ -47,6 +48,7 @@ const Slider = (props) => {
   useEffect(() => {
     guide === props.modalName ? openModal() : setName(name + 1)
   }, [guide])
+
   return (
     <div className=" flex relative justify-center select-none">
       <div className="md:grid grid-cols-2 py-4 cursor-pointer">
