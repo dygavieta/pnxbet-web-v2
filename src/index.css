@@ -67,7 +67,7 @@
     @apply bg-transparent border-white hover:bg-orange-700 text-white  hover:text-white hover:border-orange-700 uppercase w-full my-2;
   }
   .footItem {
-    @apply py-1 font-semibold  pt-2  text-gray-200 text-sm;
+    @apply py-1 font-semibold  pt-2 px-2 text-gray-200 text-sm;
   }
 
   .footItem a {

@@ -11,22 +11,50 @@ const Guides = () => {
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-4 ">
         <div>
           <Link to="/guides/registration_guide">
-            <img src={regis} alt="\" className="guideImg" />
+            <img
+              src={regis}
+              alt="\"
+              className="guideImg"
+              onClick={() => {
+                window.scrollTo(0, 0)
+              }}
+            />
           </Link>
         </div>
         <div>
           <Link to="/guides/verification_guide">
-            <img src={verify} alt="\" className="guideImg" />
+            <img
+              src={verify}
+              alt="\"
+              className="guideImg"
+              onClick={() => {
+                window.scrollTo(0, 550)
+              }}
+            />
           </Link>
         </div>
         <div>
           <Link to="/guides/deposit_guide">
-            <img src={depo} alt="\" className="guideImg" />
+            <img
+              src={depo}
+              alt="\"
+              className="guideImg"
+              onClick={() => {
+                window.scrollTo(0, 1150)
+              }}
+            />
           </Link>
         </div>
         <div>
           <Link to="/guides/withdrawal_guide">
-            <img src={withdraw} alt="\" className="guideImg" />
+            <img
+              src={withdraw}
+              alt="\"
+              className="guideImg"
+              onClick={() => {
+                window.scrollTo(0, 1450)
+              }}
+            />
           </Link>
         </div>
       </div>

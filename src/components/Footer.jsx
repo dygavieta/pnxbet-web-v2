@@ -1,5 +1,10 @@
 import React from 'react'
 
+import {
+  FaTwitterSquare,
+  FaFacebookSquare,
+  FaInstagramSquare,
+} from 'react-icons/fa'
 const Footer = () => {
   return (
     <div className="w-full py-2 px-2 bg-black">
@@ -55,11 +60,15 @@ const Footer = () => {
         <div className="">
           <h6 className="font-bold uppercase pt-2">Social</h6>
           <ul>
-            <li className="footItem font-semibold uppercase pt-2 hover:text-slate-600">
-              FB ICON
+            <li className="footItem">
+              <FaFacebookSquare className="text-2xl" />
             </li>
-            <li className="footItem">Twitter ICON</li>
-            <li className="footItem">Insta ICON</li>
+            <li className="footItem">
+              <FaTwitterSquare className="text-2xl " />
+            </li>
+            <li className="footItem">
+              <FaInstagramSquare className="text-2xl" />
+            </li>
           </ul>
         </div>
         <div className="text-center text-white   col-span-3 md:col-auto  ">
