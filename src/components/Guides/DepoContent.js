@@ -24,7 +24,7 @@ const DepoContent = [
   },
   {
     id: 4,
-    image: require('../../assets/deposit-slides/depo3.png'),
+    image: require('../../assets/deposit-slides/depo4.png'),
     head: 'DEPOSIT VIA VOUCHER CODES',
     sub: [
       'a.) Click https://pnxbetforum.com',
